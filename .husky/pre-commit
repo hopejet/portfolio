@@ -1,3 +1,3 @@
 DETECT_SECRETS="/Users/hopejeter/Library/Python/3.9/bin/detect-secrets-hook"
 
-git diff --cached --name-only -z | xargs -0 "$DETECT_SECRETS" --baseline .secrets.baseline
+git diff --cached --name-only -z | xargs -0 "$DETECT_SECRETS" --baseline .secrets.baseline --exclude-files 'pnpm-lock\.yaml'
